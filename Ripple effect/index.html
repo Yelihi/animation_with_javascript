@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Riple</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+  </head>
+  <body>
+    <button id="btn1">CLICK</button>
+    <button id="btn2">CLICK</button>
+
+    <script>
+      const btn = document.getElementById("btn1");
+      const btn2 = document.getElementById("btn2");
+
+      const onClick = (e, button) => {
+        const { x, y, width, height } = button.getBoundingClientRect();
+        const radius = Math.sqrt(width * width + height * height);
+        button.style.setProperty("--diameter", radius * 2 + "px");
+        const { clientX, clientY } = e;
+        const left = ((clientX - x - radius) / width) * 100 + "%";
+        const top = ((clientY - y - radius) / height) * 100 + "%";
+        button.style.setProperty("--left", left);
+        button.style.setProperty("--top", top);
+        button.style.setProperty("--a", ""); // 클릭때마다 속성을 지우고
+        setTimeout(() => {
+          // 지우고 다시 속성을 부여한다.
+          button.style.setProperty("--a", "ripple-effect 500ms linear");
+        });
+      };
+
+      btn.addEventListener("click", (e) => onClick(e, btn));
+      btn2.addEventListener("click", (e) => onClick(e, btn2));
+    </script>
+  </body>
+</html>
