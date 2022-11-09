@@ -95,11 +95,13 @@ button:after {
  카드에 마우스를 hover 시 일정 각도로 움직이는 카드를 만들 때, 몇가지 고려사항이 있습니다.
 </p>
 <br />
+
 - 화면 내 요소(카드)의 위치파악을 위한 getBoundingClientRect 활용
 - 마우스가 클릭하는 지점의 좌표를 파악하여야 하기에, 이를 위한 centerX, centerY 계산
 - 동적으로 변경해주기 위한 style.setProperty 적용
 - transform : rotate3d, boxshadow, backgroundImage : radial-gradient 속성을 동적으로 적용하기
 - 화면 사이즈 변경에 따른 resize 시 새로 left, top 적용하기
+
   <br />
 
 ```js
