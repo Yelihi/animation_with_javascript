@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.02em;
+  background-color: #1f2d3d;
+}
+
+h1 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1f2d3d;
+  line-height: 1.25;
+}
+
+strong {
+  font-size: 14px;
+  font-weight: 400;
+  color: #afb3b9;
+  line-height: 1.4285714286;
+}
+
+p {
+  font-size: 16px;
+  color: #79818b;
+  line-height: 1.5;
+}
+
+/* ▼ WHERE YOUR CODE BEGINS */
+
+.card {
+  max-width: 540px;
+  background-color: white;
+}
+
+.card::after {
+  content: "";
+  display: block;
+  clear: right;
+}
+
+.card img {
+  margin: 20px 20px 56px 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.card-content {
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  float: right;
+}
+
+.card-content h1 {
+  margin-bottom: 4px;
+}
+
+.card-content strong {
+  display: block;
+  margin-bottom: 12px;
+}
