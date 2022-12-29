@@ -1,0 +1,52 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: bisque;
+}
+
+.user-card {
+  display: flex;
+  gap: 12px;
+  width: 240px;
+  padding: 8px 12px;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.user-photo {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.user-photo img {
+  /* image 는 inline 이더라도 높이 너비 가짐*/
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-status {
+  display: flex;
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: greenyellow;
+  border: 2px solid white;
+}
+
+.user-name {
+  font-size: 16px;
+  line-height: 40px;
+  font-weight: 400;
+  text-align: center;
+}

@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+  height: 100vh;
+  width: 100vw;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 40px;
+  width: fit-content;
+  height: auto;
+  background-color: white;
+  border-radius: 16px;
+}
+
+.profile > img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+.profile-location {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 32px;
+  color: #8492a6;
+}
+
+.profile-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 306px;
+  height: auto;
+}
+
+.profile-detail-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.profile-detail-item > dt {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #8492a6;
+}
+
+.profile-detail-item > dd {
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 40px;
+  color: #0066ff;
+}

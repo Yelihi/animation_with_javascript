@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent; /* 뒷 배경을 부모와 같게해줌 */
+}
+
+body {
+  background-color: gray;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  height: fit-content;
+  background-color: white;
+}
+
+.card-carousel {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+}
+
+#prev {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(0, -50%); /* 중간에다가 맞추기 첫번째 인자는 x축, 두번째 인자는 y축 */
+}
+
+#next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(0, -50%); /* 중간에다가 맞추기 첫번째 인자는 x축, 두번째 인자는 y축 */
+}
+
+.card-carousel > img {
+  width: 407px;
+  height: 270px;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  width: 400px;
+  height: 100%;
+  background-color: white;
+}
+
+.card-content h1 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.card-content > span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7d858f;
+  margin-bottom: 8px;
+}
+
+.card-content strong {
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 24px;
+  color: #2860e1;
+}
+
+.card-content strong > span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #273444;
+}
