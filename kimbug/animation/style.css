@@ -1,0 +1,69 @@
+/* ▼ WHERE YOUR CODE BEGINS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Mulish";
+  background-color: #e5e5e5;
+}
+
+.loading {
+  width: 500px;
+  height: 216px;
+  padding: 80px 100px;
+  background-color: white;
+}
+
+.loading-title {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+  opacity: 1;
+  animation-name: opacity-loading;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+.progress-bar {
+  position: relative;
+  width: 300px;
+  height: 12px;
+  background-color: #e5eaef;
+  border-radius: 100px;
+}
+
+.progress-bar-gauge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #13ce66;
+  border-radius: 100px;
+  animation-name: add-gauge;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+}
+
+@keyframes add-gauge {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes opacity-loading {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}

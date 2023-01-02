@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: "Poppins";
+}
+
+.card {
+  display: flex;
+  padding: 24px;
+  background-color: white;
+  gap: 24px;
+  width: 840px;
+  height: fit-content;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image > img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card-image > button {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 36px;
+  height: 36px;
+  background-color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-image: url("./assets/icon-favorite.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 24px;
+  cursor: pointer;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.property-type {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-type > span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7d858f;
+}
+
+.plus-badge {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 22px;
+  background-color: #92174d;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 8px;
+  text-transform: uppercase;
+}
+
+.property-rate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.property-rate::before {
+  content: "";
+  position: relative;
+  bottom: 1px;
+  display: flex;
+  width: 16px;
+  height: 16px;
+  background-image: url("./assets/icon-star.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.property-rate > strong {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.property-rate > span {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7d858f;
+}
+
+.card-title {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  margin-top: 9px;
+}
+
+.card-detail {
+  margin-top: 16px;
+}
+
+.sr-only {
+  /* 스크린 리더가 읽을 수 있도록 none 은 해주지 말자 */
+  position: absolute;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.property-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.property-detail > div > dd > span {
+  color: #7d858f;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.property-detail > div > dd > span::after {
+  content: ".";
+  margin: 0 4px;
+}
+
+.property-detail > div > dd > span:last-child::after {
+  content: "";
+  margin: 0;
+}
