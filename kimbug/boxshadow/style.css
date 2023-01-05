@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button {
+  width: 161px;
+  height: 56px;
+  border-radius: 100px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #ff4949;
+  box-shadow: 0 10px 16px 0 rgba(255, 73, 73, 0.35);
+}
+
+.conform-button {
+  background-color: #13cc66;
+  box-shadow: 0px 10px 16px 0 rgba(19, 206, 102, 0.35);
+}
