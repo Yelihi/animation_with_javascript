@@ -37,9 +37,14 @@ input {
 }
 
 section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: auto;
 }
+
 /* typograpy */
 
 .text-1 {
@@ -92,7 +97,16 @@ button {
 }
 
 /* Landing */
+
 .mainContainer {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: auto;
+  background-color: #fdded8;
+}
+
+.main > div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,7 +114,6 @@ button {
   width: 100%;
   height: auto;
   padding: 154px 15px;
-  background-color: #fdded8;
 }
 
 .mainTitle {
@@ -122,6 +135,14 @@ button {
 }
 /* Testimonials */
 
+.testimonialsContainer {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: auto;
+  background-color: #f4f5f7;
+}
+
 .testimonials {
   display: flex;
   flex-direction: column;
@@ -130,7 +151,6 @@ button {
   width: 100%;
   height: auto;
   padding: 80px 15px;
-  background-color: #f4f5f7;
 }
 
 .testTite {
@@ -145,6 +165,14 @@ button {
 
 .programContainer {
   display: flex;
+  justify-content: center;
+  width: inherit;
+  height: auto;
+  background-color: #ffffff;
+}
+
+.program {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -152,7 +180,6 @@ button {
   width: 100%;
   height: auto;
   padding: 80px 15px;
-  background-color: #ffffff;
 }
 
 .programDescription {
@@ -195,7 +222,7 @@ button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 4px 6px rgba(0, 0, 0, 0.05), inset 0px 1px 0px rgba(255, 255, 255, 0.1);
 }
 
-.programCard > p {
+.programCard > h3 {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -219,6 +246,14 @@ button {
 
 /* Curriculum */
 
+.curriculumContainer {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: auto;
+  background-color: #ffffff;
+}
+
 .curriculum {
   display: flex;
   flex-direction: column;
@@ -228,7 +263,6 @@ button {
   width: 100%;
   height: auto;
   padding: 80px 15px;
-  background-color: #ffffff;
 }
 
 .curriculumSection {
@@ -282,6 +316,14 @@ button {
 }
 
 /* Banner */
+
+.bannerContainer {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: auto;
+  background-color: #f2f8fa;
+}
 
 .banner {
   display: flex;
@@ -366,6 +408,14 @@ button {
 
 /* Footer */
 
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  width: inherit;
+  height: auto;
+  background-color: #f2f8fa;
+}
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -377,7 +427,7 @@ button {
   background-color: #ffffff;
 }
 
-.footerContainer {
+.footerDiv {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -388,4 +438,364 @@ button {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.01em;
+}
+
+/* media query */
+
+@media screen and (min-width: 576px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 960px;
+  }
+
+  /* typograph */
+  .text-1 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: -0.05em;
+  }
+
+  .text-11 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+  }
+
+  .text-2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -0.04em;
+  }
+
+  .text-3 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+  }
+
+  .text-11 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -0.03em;
+  }
+
+  /* button style */
+
+  button {
+    width: 160px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  /* landing */
+  .main > div {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: auto;
+    padding: 154px 15px;
+  }
+
+  .mainTitle {
+    display: block;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .mainSubText {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .mainSubText > p {
+    text-align: center;
+    max-width: 370px;
+  }
+
+  .mainButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Testimonials */
+  #t-col1 {
+    grid-column: 1 / span 5;
+    grid-row: 1 / -1;
+  }
+
+  #t-col2 {
+    grid-column: 7 / span 6;
+    grid-row: 1 / -1;
+  }
+
+  .testTite {
+    margin-bottom: 0;
+  }
+
+  /* Program */
+
+  #p-col1 {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  #p-col2 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .programDescription {
+    margin-bottom: 57px;
+  }
+
+  .programDescription > p {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .programSub {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .programTitle {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .programSortContainer {
+    flex-direction: row;
+  }
+
+  .programCard > h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  /* Curriculum */
+
+  #c-col1 {
+    grid-column: 1 / span 6;
+    grid-row: 1;
+  }
+
+  #c-col2 {
+    grid-column: 7 / span 6;
+    grid-row: 1;
+  }
+
+  #c-col3 {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .curriculumSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .curriculumSection > p {
+    line-height: 24px;
+    margin-bottom: 32px;
+  }
+
+  .curriSub {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    color: #0189d1;
+    margin-bottom: 8px;
+  }
+
+  .curriTitle {
+    margin-bottom: 24px;
+  }
+
+  .curriculumImage {
+    display: none;
+  }
+
+  .curriculumImage > img {
+    width: 425px;
+    height: 426px;
+    object-fit: cover;
+  }
+
+  .curriculumDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .curriculumDescription > p {
+    font-size: 15px;
+  }
+
+  .curriParagraph > p > span {
+    font-weight: 700;
+  }
+
+  /* Banner */
+
+  .bannerContainer {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    height: auto;
+    background-color: #f2f8fa;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding: 40px 15px;
+    background-color: #f2f8fa;
+  }
+
+  .bannerImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    height: 240px;
+    margin-bottom: 16px;
+  }
+
+  .bannerImg > img {
+    width: 191.48px;
+    height: 190px;
+    object-fit: cover;
+  }
+
+  .bannerInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .bannerInfo > p {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .bannerTitle {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.05em;
+  }
+
+  .bannerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .bannerInput {
+    width: 100%;
+    height: 48px;
+    padding: 12px 16px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .bannerButton {
+    width: 100%;
+  }
+
+  .bannerFooter {
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: #7b7b7e;
+  }
+
+  .bannerFooter > a {
+    text-decoration: underline;
+    color: #3040c4;
+    cursor: pointer;
+  }
+
+  /* Footer */
+
+  .footerContainer {
+    display: flex;
+    justify-content: center;
+    width: inherit;
+    height: auto;
+    background-color: #f2f8fa;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    padding: 24px 15px;
+    background-color: #ffffff;
+  }
+
+  .footerDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .footerLink {
+    color: #807f81;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+  }
 }
