@@ -413,7 +413,7 @@ button {
   justify-content: center;
   width: inherit;
   height: auto;
-  background-color: #f2f8fa;
+  background-color: #ffffff;
 }
 
 .footer {
@@ -442,23 +442,317 @@ button {
 
 /* media query */
 
-@media screen and (min-width: 576px) {
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 15px;
-    max-width: 540px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 15px;
-    max-width: 720px;
+    max-width: 960px;
+  }
+
+  /* typograph */
+  .text-1 {
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: -0.05em;
+  }
+
+  .text-11 {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.03em;
+  }
+
+  .text-2 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    letter-spacing: -0.04em;
+  }
+
+  .text-3 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+  }
+
+  .text-11 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -0.03em;
+  }
+
+  /* button style */
+
+  button {
+    width: 160px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  /* landing */
+  .main > div {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: auto;
+    padding: 154px 15px;
+  }
+
+  .mainTitle {
+    display: block;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  .mainSubText {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  .mainSubText > p {
+    text-align: center;
+    max-width: 370px;
+  }
+
+  .mainButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Testimonials */
+  #t-col1 {
+    grid-column: 1 / span 5;
+    grid-row: 1 / -1;
+  }
+
+  #t-col2 {
+    grid-column: 7 / span 6;
+    grid-row: 1 / -1;
+  }
+
+  .testimonials {
+    padding: 40px 0px;
+  }
+
+  .testTite {
+    margin-bottom: 0;
+  }
+
+  /* Program */
+
+  #p-col1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / span 6;
+  }
+
+  #p-col2 {
+    grid-column: 1 / -1;
+    grid-row: 7 / span 6;
+  }
+
+  .program {
+    padding: 40px 0px;
+  }
+
+  .programDescription {
+    margin-bottom: 57px;
+  }
+
+  .programDescription > p {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .programSub {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 16px;
+  }
+
+  .programTitle {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .programSortContainer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .programCard > h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+  }
+
+  /* Curriculum */
+
+  .grid {
+    grid-template-rows: repeat(12, 1fr);
+  }
+
+  #c-col1 {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 8;
+  }
+
+  #c-col2 {
+    grid-column: 7 / span 6;
+    grid-row: 1 / span 9;
+  }
+
+  #c-col3 {
+    grid-column: 1 / -1;
+    grid-row: 9 / -1;
+  }
+
+  .curriculum {
+    padding: 40px 0px;
+  }
+
+  .curriculumSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .curriculumSection > p {
+    line-height: 32px;
+    margin-bottom: 72px;
+  }
+
+  .curriSub {
+    font-size: 22px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  .curriTitle {
+    margin-bottom: 32px;
+  }
+
+  .curriculumImage {
+    display: block;
+  }
+
+  .curriculumDescription {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .curriculumDescription > p {
+    font-size: 15px;
+  }
+
+  .curriParagraph {
+    max-width: 450px;
+  }
+
+  .curriParagraph > p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .curriParagraph > p > span {
+    font-weight: 700;
+  }
+
+  /* Banner */
+
+  #b-col1 {
+    grid-column: 1 / span 5;
+    grid-row: 1 / -1;
+  }
+
+  #b-col2 {
+    grid-column: 6 / span 7;
+    grid-row: 3 / 11;
+  }
+
+  .banner {
+    padding: 40px 0px;
+  }
+
+  .bannerImg {
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+  }
+
+  .bannerImg > img {
+    width: 287px;
+    height: 285px;
+  }
+
+  .bannerInfo {
+    align-items: flex-start;
+  }
+
+  .bannerInfo > p {
+    text-align: start;
+  }
+
+  .bannerTitle {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .bannerForm {
+    align-items: flex-start;
+  }
+
+  .bannerInputContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .bannerInput {
+    width: 362px;
+    height: 56px;
+    padding: 16px 16px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .bannerButton {
+    width: 160px;
+  }
+
+  .bannerFooter {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  /* Footer */
+
+  #f-col1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+
+  .footer {
+    height: 56px;
+    padding: 16px 0px;
+  }
+
+  .footerDiv {
+    flex-direction: row;
   }
 }
 
@@ -560,6 +854,10 @@ button {
     grid-row: 1 / -1;
   }
 
+  .testimonials {
+    padding: 40px 0px;
+  }
+
   .testTite {
     margin-bottom: 0;
   }
@@ -568,12 +866,16 @@ button {
 
   #p-col1 {
     grid-column: 1 / -1;
-    grid-row: 1;
+    grid-row: 1 / span 6;
   }
 
   #p-col2 {
     grid-column: 1 / -1;
-    grid-row: 2;
+    grid-row: 7 / span 6;
+  }
+
+  .program {
+    padding: 40px 0px;
   }
 
   .programDescription {
@@ -598,6 +900,7 @@ button {
 
   .programSortContainer {
     flex-direction: row;
+    justify-content: space-between;
   }
 
   .programCard > h3 {
@@ -609,19 +912,27 @@ button {
 
   /* Curriculum */
 
+  .grid {
+    grid-template-rows: repeat(12, 1fr);
+  }
+
   #c-col1 {
     grid-column: 1 / span 6;
-    grid-row: 1;
+    grid-row: 1 / span 8;
   }
 
   #c-col2 {
     grid-column: 7 / span 6;
-    grid-row: 1;
+    grid-row: 1 / span 9;
   }
 
   #c-col3 {
     grid-column: 1 / -1;
-    grid-row: 2;
+    grid-row: 9 / -1;
+  }
+
+  .curriculum {
+    padding: 40px 0px;
   }
 
   .curriculumSection {
@@ -631,43 +942,42 @@ button {
   }
 
   .curriculumSection > p {
-    line-height: 24px;
-    margin-bottom: 32px;
+    line-height: 32px;
+    margin-bottom: 72px;
   }
 
   .curriSub {
-    display: inline-block;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 22px;
     line-height: 24px;
-    letter-spacing: -0.01em;
-    color: #0189d1;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
   }
 
   .curriTitle {
-    margin-bottom: 24px;
+    margin-bottom: 32px;
   }
 
   .curriculumImage {
-    display: none;
-  }
-
-  .curriculumImage > img {
-    width: 425px;
-    height: 426px;
-    object-fit: cover;
+    display: block;
   }
 
   .curriculumDescription {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 30px;
   }
 
   .curriculumDescription > p {
     font-size: 15px;
+  }
+
+  .curriParagraph {
+    max-width: 450px;
+  }
+
+  .curriParagraph > p {
+    font-size: 18px;
+    line-height: 26px;
   }
 
   .curriParagraph > p > span {
@@ -676,126 +986,86 @@ button {
 
   /* Banner */
 
-  .bannerContainer {
-    display: flex;
-    justify-content: center;
-    width: inherit;
-    height: auto;
-    background-color: #f2f8fa;
+  #b-col1 {
+    grid-column: 1 / span 5;
+    grid-row: 1 / -1;
+  }
+
+  #b-col2 {
+    grid-column: 6 / span 7;
+    grid-row: 3 / 11;
   }
 
   .banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: auto;
-    padding: 40px 15px;
-    background-color: #f2f8fa;
+    padding: 40px 0px;
   }
 
   .bannerImg {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 290px;
-    height: 240px;
-    margin-bottom: 16px;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
   }
 
   .bannerImg > img {
-    width: 191.48px;
-    height: 190px;
-    object-fit: cover;
+    width: 287px;
+    height: 285px;
   }
 
   .bannerInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
+    align-items: flex-start;
   }
 
   .bannerInfo > p {
-    margin-bottom: 24px;
-    text-align: center;
+    text-align: start;
   }
 
   .bannerTitle {
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 32px;
-    letter-spacing: -0.05em;
+    font-size: 40px;
+    line-height: 40px;
   }
 
   .bannerForm {
+    align-items: flex-start;
+  }
+
+  .bannerInputContainer {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 8px;
   }
 
   .bannerInput {
-    width: 100%;
-    height: 48px;
-    padding: 12px 16px;
-    font-family: "DM Sans", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
+    width: 362px;
+    height: 56px;
+    padding: 16px 16px;
+    font-size: 18px;
     line-height: 24px;
   }
 
   .bannerButton {
-    width: 100%;
+    width: 160px;
   }
 
   .bannerFooter {
-    font-size: 13px;
-    line-height: 20px;
-    text-align: center;
-    color: #7b7b7e;
-  }
-
-  .bannerFooter > a {
-    text-decoration: underline;
-    color: #3040c4;
-    cursor: pointer;
+    font-size: 14px;
+    line-height: 24px;
   }
 
   /* Footer */
 
-  .footerContainer {
-    display: flex;
-    justify-content: center;
-    width: inherit;
-    height: auto;
-    background-color: #f2f8fa;
+  #f-col1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
   }
 
   .footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 100%;
-    height: auto;
-    padding: 24px 15px;
-    background-color: #ffffff;
+    height: 56px;
+    padding: 16px 0px;
   }
 
   .footerDiv {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .footerLink {
-    color: #807f81;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.01em;
+    flex-direction: row;
   }
 }
